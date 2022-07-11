@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 60px;
+	border: 1px solid gray;
+	border-radius: 20px;
+	margin-top: 20px;
+	box-shadow: 5px 5px 5px gray;
+	margin-bottom: 20px;
+	background-image: linear-gradient(290deg,
+				hsl(240deg 24% 89%) 0%,
+				hsl(240deg 33% 88%) 12%,
+				hsl(239deg 41% 88%) 22%,
+				hsl(239deg 48% 87%) 30%,
+				hsl(239deg 54% 86%) 36%,
+				hsl(239deg 59% 85%) 42%,
+				hsl(239deg 64% 84%) 47%,
+				hsl(239deg 69% 83%) 52%,
+				hsl(239deg 73% 82%) 57%,
+				hsl(239deg 76% 80%) 61%,
+				hsl(238deg 80% 79%) 64%,
+				hsl(238deg 83% 78%) 68%,
+				hsl(238deg 85% 77%) 71%,
+				hsl(238deg 88% 75%) 75%,
+				hsl(238deg 90% 74%) 78%,
+				hsl(238deg 92% 72%) 81%,
+				hsl(238deg 94% 70%) 84%,
+				hsl(238deg 95% 68%) 87%,
+				hsl(237deg 97% 66%) 90%,
+				hsl(237deg 98% 63%) 93%,
+				hsl(236deg 99% 59%) 97%,
+				hsl(231deg 100% 50%) 100%);;
+}
+.btn-light{
+	font-size: 24px;
+	margin: 0px 0px 30px 0px;
+}
+.city{
+	font-size: 75px;
+	font-family: 'Prompt', sans-serif;
+	color: rgb(61, 61, 143);
+	margin-bottom: 20px;
+}
+.temperature{
+	font-size: 46px;
+	color: rgb(45, 44, 44);
+}
+.temperature-units a {
+	text-decoration: none;
+	font-size: 20px;
+	color: rgb(61, 61, 143);
+
+}
+.precipitation{
+	margin: 30px 0px 30px 50px;
+}
+.wind{
+	margin-left: 50px;
+}
+h5 {
+	font-size: 30px;
+	color: rgb(45, 44, 44);
+}
+span{
+	color: rgb(61, 61, 143);
+}
+.col{
+	margin: 0px 0px 30px 0px;
+}
+form{
+	margin-bottom: 50px;
+}
+.form-city{
+	display: inline-block;
+	min-width: 570px;
+	min-height: 50px;
+	font-size: 24px;
+	border: none;
+	border: 2px solid rgb(132, 132, 202);
+	background-image: linear-gradient(290deg,
+				hsl(240deg 65% 89%) 0%,
+				hsl(240deg 64% 89%) 12%,
+				hsl(240deg 62% 89%) 22%,
+				hsl(239deg 61% 89%) 30%,
+				hsl(239deg 60% 89%) 36%,
+				hsl(239deg 59% 89%) 42%,
+				hsl(239deg 57% 89%) 47%,
+				hsl(239deg 56% 89%) 52%,
+				hsl(238deg 55% 89%) 57%,
+				hsl(238deg 53% 89%) 61%,
+				hsl(238deg 52% 90%) 64%,
+				hsl(238deg 51% 90%) 68%,
+				hsl(237deg 49% 90%) 71%,
+				hsl(237deg 48% 90%) 75%,
+				hsl(237deg 46% 90%) 78%,
+				hsl(236deg 45% 90%) 81%,
+				hsl(236deg 44% 90%) 84%,
+				hsl(235deg 42% 90%) 87%,
+				hsl(235deg 41% 90%) 90%,
+				hsl(234deg 39% 90%) 93%,
+				hsl(234deg 38% 90%) 97%,
+				hsl(233deg 36% 90%) 100%);
+}
+.form-seach{
+	min-height: 50px;
+	font-size: 24px;
+	min-width: 150px;
+	background-color: rgb(181, 181, 244);
+	color: white;
+	font-weight: 600;
+	border-color: rgb(132, 132, 202);
+}
+.form-current{
+	min-height: 50px;
+	min-width: 150px;
+	font-size: 24px;
+	background-color: rgb(143, 143, 201);
+		color: white;
+	font-weight: 600;
+	border-color: rgb(112, 112, 192);
+}
+.card-container{
+	text-align: center;
+	margin: 0px 15.5px 0px 0px;
+}
+.card-title{
+	margin-bottom: 20px;
+	color: rgb(61, 61, 143);
+}
+.card-temperature{
+	color: rgb(61, 61, 143);
+}
+.card-img{
+	max-width: 100px;
+	margin: 0 auto;
+
+}
+.card{
+min-height: 200px;
+min-width: 200px;
+background-image: linear-gradient(290deg,
+			hsl(240deg 65% 89%) 0%,
+			hsl(240deg 64% 89%) 12%,
+			hsl(240deg 62% 89%) 22%,
+			hsl(239deg 61% 89%) 30%,
+			hsl(239deg 60% 89%) 36%,
+			hsl(239deg 59% 89%) 42%,
+			hsl(239deg 57% 89%) 47%,
+			hsl(239deg 56% 89%) 52%,
+			hsl(238deg 55% 89%) 57%,
+			hsl(238deg 53% 89%) 61%,
+			hsl(238deg 52% 90%) 64%,
+			hsl(238deg 51% 90%) 68%,
+			hsl(237deg 49% 90%) 71%,
+			hsl(237deg 48% 90%) 75%,
+			hsl(237deg 46% 90%) 78%,
+			hsl(236deg 45% 90%) 81%,
+			hsl(236deg 44% 90%) 84%,
+			hsl(235deg 42% 90%) 87%,
+			hsl(235deg 41% 90%) 90%,
+			hsl(234deg 39% 90%) 93%,
+			hsl(234deg 38% 90%) 97%,
+			hsl(233deg 36% 90%) 100%);
+
+}

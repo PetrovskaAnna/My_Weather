@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>WeatherApp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1 class="city" id="city">Boryslav</h1>
+          <h5 class="day">
+            Sunday
+            <span class="time">23:37</span>
+          </h5>
+          <h5 class="temperature">
+            <span id="temperature">15</span>
+            <span class="temperature-units"
+              ><a id="celsius-link" href="#">°C | </a
+              ><a id="fahrenheit-link" href="#">°F</a></span
+            >
+          </h5>
+        </div>
+        <div class="col">
+          <img src="./images/sun_cloud_rain.png" alt="image" width="290" />
+        </div>
+        <div class="col">
+          <h5 class="precipitation">
+            Humidity:
+            <span id="precipitation-percent" class="precipitation-percent"
+              >89</span
+            ><span class="precipitation-percent__marking">%</span>
+          </h5>
+          <h5 class="wind">
+            Wind: <span id="wind-speed" class="wind-speed">4</span
+            ><span class="wind-speed__marking">km/h</span>
+          </h5>
+        </div>
+      </div>
+      <form id="form-search">
+        <input
+          id="form-city"
+          class="form-city"
+          type="text"
+          placeholder="Enter your city"
+        />
+        <input class="form-seach" type="submit" value="Search" />
+        <input
+          id="form-current"
+          class="form-current"
+          type="submit"
+          value="Current"
+        />
+      </form>
+      <div class="card-group">
+        <div class="card-container">
+          <div class="card">
+            <h5 class="card-title">Monday</h5>
+            <img src="./images/sun.png" class="card-img" alt="picture" />
+            <h5 class="card-temperature">22°C</h5>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <h5 class="card-title">Tuesday</h5>
+            <img src="./images/sun_cloud.png" class="card-img" alt="picture" />
+            <h5 class="card-temperature">20°C</h5>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <h5 class="card-title">Wednesday</h5>
+            <img src="./images/rain.png" class="card-img" alt="picture" />
+            <h5 class="card-temperature">25°C</h5>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <h5 class="card-title">Thursday</h5>
+            <img src="./images/sun.png" class="card-img" alt="picture" />
+            <h5 class="card-temperature">21°C</h5>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <h5 class="card-title">Friday</h5>
+            <img src="./images/sun.png" class="card-img" alt="picture" />
+            <h5 class="card-temperature">28°C</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/app.js"></script>
+  </body>
+</html>
