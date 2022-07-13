@@ -44,6 +44,8 @@ function search(event){
 		let humidity = Math.round(response.data.main.humidity);
 		let cityHumidity = document.querySelector("#humidity-percent");
 		cityHumidity.innerHTML = `${humidity}`;
+		let weatherIcon = document.querySelector("#icon");
+		weatherIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 	}
 	axios.get(apiUrl).then(showTemperature);
 }
@@ -73,6 +75,7 @@ let Boryslavcity = cityBoryslav.innerHTML;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Boryslavcity}&appid=${apiKey}&units=metric`;
 
 function showTemperatureBoryslav(response) {
+	console.log (response.data);
 	let temperature = Math.round(response.data.main.temp);
 	let cityTemperature = document.querySelector("#temperature");
 	cityTemperature.innerHTML = `${temperature}`;
@@ -80,8 +83,10 @@ function showTemperatureBoryslav(response) {
 	let cityWind = document.querySelector("#wind-speed");
 	cityWind.innerHTML = `${wind}`;
 	let humidity = Math.round(response.data.main.humidity);
-	let cityHumidity = document.querySelector("#precipitation-percent");
+	let cityHumidity = document.querySelector("#humidity-percent");
 	cityHumidity.innerHTML = `${humidity}`;
+	let weatherIcon = document.querySelector("#icon");
+	weatherIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 axios.get(apiUrl).then(showTemperatureBoryslav);
 
@@ -99,8 +104,10 @@ axios.get(apiUrl).then(showTemperatureBoryslav);
 		let cityWind = document.querySelector("#wind-speed");
 		cityWind.innerHTML = `${wind}`;
 		let humidity = Math.round(response.data.main.humidity);
-		let cityHumidity = document.querySelector("#precipitation-percent");
+		let cityHumidity = document.querySelector("#humidity-percent");
 		cityHumidity.innerHTML = `${humidity}`;
+		let weatherIcon = document.querySelector("#icon");
+		weatherIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 	}
 
 	function changeMyLocation(position){
