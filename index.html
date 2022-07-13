@@ -16,89 +16,94 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col">
-          <h1 class="city" id="city">Boryslav</h1>
-          <h5 class="day">
-            Sunday
-            <span class="time">23:37</span>
-          </h5>
-          <h5 class="temperature">
-            <span id="temperature">15</span>
-            <span class="temperature-units"
-              ><a id="celsius-link" href="#">°C | </a
-              ><a id="fahrenheit-link" href="#">°F</a></span
-            >
-          </h5>
+      <div class="weather-container">
+        <div class="row">
+          <div class="col">
+            <h1 class="city" id="city">Boryslav</h1>
+            <h5 class="day">
+              Sunday
+              <span class="time">23:37</span>
+            </h5>
+            <h5 class="temperature">
+              <span id="temperature">15</span>
+              <span class="temperature-units"
+                ><a id="celsius-link" href="#">°C | </a
+                ><a id="fahrenheit-link" href="#">°F</a></span
+              >
+            </h5>
+          </div>
+          <div class="col">
+            <img src="./images/sun_cloud_rain.png" alt="image" width="190" />
+          </div>
+          <div class="col">
+            <h5 class="precipitation">
+              Humidity:
+              <span id="precipitation-percent" class="precipitation-percent"
+                >89</span
+              ><span class="precipitation-percent__marking">%</span>
+            </h5>
+            <h5 class="wind">
+              Wind: <span id="wind-speed" class="wind-speed">4</span
+              ><span class="wind-speed__marking">km/h</span>
+            </h5>
+          </div>
         </div>
-        <div class="col">
-          <img src="./images/sun_cloud_rain.png" alt="image" width="290" />
-        </div>
-        <div class="col">
-          <h5 class="precipitation">
-            Humidity:
-            <span id="precipitation-percent" class="precipitation-percent"
-              >89</span
-            ><span class="precipitation-percent__marking">%</span>
-          </h5>
-          <h5 class="wind">
-            Wind: <span id="wind-speed" class="wind-speed">4</span
-            ><span class="wind-speed__marking">km/h</span>
-          </h5>
+        <form id="form-search">
+          <input
+            id="form-city"
+            class="form-city"
+            type="text"
+            placeholder="Enter your city"
+          />
+          <input class="form-seach" type="submit" value="Search" />
+          <input
+            id="form-current"
+            class="form-current"
+            type="submit"
+            value="Current"
+          />
+        </form>
+        <div class="card-group">
+          <div class="card-container">
+            <div class="card">
+              <h5 class="card-title">Monday</h5>
+              <img src="./images/sun.png" class="card-img" alt="picture" />
+              <h5 class="card-temperature">22°C</h5>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <h5 class="card-title">Tuesday</h5>
+              <img src="./images/sun_cloud.png" class="card-img" alt="picture" />
+              <h5 class="card-temperature">20°C</h5>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <h5 class="card-title">Wednesday</h5>
+              <img src="./images/rain.png" class="card-img" alt="picture" />
+              <h5 class="card-temperature">25°C</h5>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <h5 class="card-title">Thursday</h5>
+              <img src="./images/sun.png" class="card-img" alt="picture" />
+              <h5 class="card-temperature">21°C</h5>
+            </div>
+          </div>
+          <div class="card-container">
+            <div class="card">
+              <h5 class="card-title">Friday</h5>
+              <img src="./images/sun.png" class="card-img" alt="picture" />
+              <h5 class="card-temperature">28°C</h5>
+            </div>
+          </div>
         </div>
       </div>
-      <form id="form-search">
-        <input
-          id="form-city"
-          class="form-city"
-          type="text"
-          placeholder="Enter your city"
-        />
-        <input class="form-seach" type="submit" value="Search" />
-        <input
-          id="form-current"
-          class="form-current"
-          type="submit"
-          value="Current"
-        />
-      </form>
-      <div class="card-group">
-        <div class="card-container">
-          <div class="card">
-            <h5 class="card-title">Monday</h5>
-            <img src="./images/sun.png" class="card-img" alt="picture" />
-            <h5 class="card-temperature">22°C</h5>
-          </div>
-        </div>
-        <div class="card-container">
-          <div class="card">
-            <h5 class="card-title">Tuesday</h5>
-            <img src="./images/sun_cloud.png" class="card-img" alt="picture" />
-            <h5 class="card-temperature">20°C</h5>
-          </div>
-        </div>
-        <div class="card-container">
-          <div class="card">
-            <h5 class="card-title">Wednesday</h5>
-            <img src="./images/rain.png" class="card-img" alt="picture" />
-            <h5 class="card-temperature">25°C</h5>
-          </div>
-        </div>
-        <div class="card-container">
-          <div class="card">
-            <h5 class="card-title">Thursday</h5>
-            <img src="./images/sun.png" class="card-img" alt="picture" />
-            <h5 class="card-temperature">21°C</h5>
-          </div>
-        </div>
-        <div class="card-container">
-          <div class="card">
-            <h5 class="card-title">Friday</h5>
-            <img src="./images/sun.png" class="card-img" alt="picture" />
-            <h5 class="card-temperature">28°C</h5>
-          </div>
-        </div>
-      </div>
+      <small>
+        <a class="link-progect" href="https://github.com/PetrovskaAnna/My_Weather" target="_blank">Open-source code</a> by Anna Petrovska
+      </small>
     </div>
     <script src="./src/app.js"></script>
   </body>
