@@ -42,7 +42,7 @@ function search(event){
 		let cityWind = document.querySelector("#wind-speed");
 		cityWind.innerHTML = `${wind}`;
 		let humidity = Math.round(response.data.main.humidity);
-		let cityHumidity = document.querySelector("#precipitation-percent");
+		let cityHumidity = document.querySelector("#humidity-percent");
 		cityHumidity.innerHTML = `${humidity}`;
 	}
 	axios.get(apiUrl).then(showTemperature);
