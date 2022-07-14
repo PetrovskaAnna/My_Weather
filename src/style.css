@@ -34,7 +34,6 @@
 .temperature-units a {
 	text-decoration: none;
 	font-size: 20px;
-	color: rgb(47, 47, 116);
 
 }
 .humidity{
@@ -121,4 +120,8 @@ form{
 .link-progect{
 	text-decoration: none;
 	color: rgb(250, 250, 29);
+}
+.temperature .active{
+	color: rgb(47, 47, 116);
+	cursor: default;
 }

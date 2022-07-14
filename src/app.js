@@ -130,14 +130,18 @@ function displayFahrenheitTemperature(event){
 	event.preventDefault();
 	let fahrenheitTemperature = Math.round((celsiusTemperature*9)/5+32);
 	let cityTemperature = document.querySelector("#temperature");
-	cityTemperature.innerHTML = fahrenheitTemperature
+	cityTemperature.innerHTML = fahrenheitTemperature;
+	// remove and add the active class 
+	celsius.classList.remove("active");
+	fahrenheit.classList.add("active");
 }
 
 function displayCelsiusTemperature(event){
 	event.preventDefault();
 	let cityTemperature = document.querySelector("#temperature");
 	cityTemperature.innerHTML = Math.round(celsiusTemperature);
-	
+	celsius.classList.add("active");
+	fahrenheit.classList.remove("active");
 }
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
