@@ -5,9 +5,7 @@ String.prototype.firstLetterCaps = function() {
 // console.log(cityTemperature);
 // let temperatureCelsius = cityTemperature.innerHTML; // 15
 
-// let fahrenheit = document.querySelector("#fahrenheit-link");
-// console.log(fahrenheit);
-// fahrenheit.addEventListener("click", changeTemperatureF);
+
 
 // let celsius = document.querySelector("#celsius-link");
 // console.log(celsius);
@@ -24,7 +22,7 @@ String.prototype.firstLetterCaps = function() {
 // function changeTemperatureC(){
 // 	cityTemperature.innerHTML = temperatureCelsius;
 // }
-
+let celsiusTemperature = null;
 function search(event){
 	event.preventDefault();
 	let searchInput = document.querySelector("#form-city");
@@ -35,7 +33,8 @@ function search(event){
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${h1.innerHTML}&appid=${apiKey}&units=metric`;
 	function showTemperature(response) {
 		console.log(response);
-		let temperature = Math.round(response.data.main.temp);
+		celsiusTemperature = response.data.main.temp;
+		let temperature = Math.round(celsiusTemperature);
 		let cityTemperature = document.querySelector("#temperature");
 		cityTemperature.innerHTML = `${temperature}`;
 		let wind = Math.round(response.data.wind.speed);
@@ -46,6 +45,7 @@ function search(event){
 		cityHumidity.innerHTML = `${humidity}`;
 		let weatherIcon = document.querySelector("#icon");
 		weatherIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+		
 	}
 	axios.get(apiUrl).then(showTemperature);
 }
@@ -67,8 +67,6 @@ let time = `${hours}:${minutes}`;
 let weekDay = document.querySelector("h5.day");
 weekDay.innerHTML = `${day}, ${time}`;
 
-
-
 let apiKey = "9de11751bb0c887f6952489fac12bc96";
 let cityBoryslav = document.querySelector("h1");
 let Boryslavcity = cityBoryslav.innerHTML;
@@ -76,7 +74,8 @@ let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Boryslavcity}&
 
 function showTemperatureBoryslav(response) {
 	console.log (response.data);
-	let temperature = Math.round(response.data.main.temp);
+	celsiusTemperature = response.data.main.temp;
+	let temperature = Math.round(celsiusTemperature);
 	let cityTemperature = document.querySelector("#temperature");
 	cityTemperature.innerHTML = `${temperature}`;
 	let wind = Math.round(response.data.wind.speed);
@@ -87,6 +86,7 @@ function showTemperatureBoryslav(response) {
 	cityHumidity.innerHTML = `${humidity}`;
 	let weatherIcon = document.querySelector("#icon");
 	weatherIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
 }
 axios.get(apiUrl).then(showTemperatureBoryslav);
 
@@ -96,8 +96,8 @@ axios.get(apiUrl).then(showTemperatureBoryslav);
 		console.log(cityNames);
 		let cityName = document.querySelector("#city");
 		cityName.innerHTML = `${cityNames}`;
-		
-		let temperature = Math.round(response.data.main.temp);
+		celsiusTemperature = response.data.main.temp;	
+		let temperature = Math.round(celsiusTemperature);
 		let cityTemperature = document.querySelector("#temperature");
 		cityTemperature.innerHTML = `${temperature}`;
 		let wind = Math.round(response.data.wind.speed);
@@ -126,3 +126,23 @@ function changeLocation(){
 let currentInput = document.querySelector("#form-current");
 currentInput.addEventListener("click", changeLocation);
 
+function displayFahrenheitTemperature(event){
+	event.preventDefault();
+	let fahrenheitTemperature = Math.round((celsiusTemperature*9)/5+32);
+	let cityTemperature = document.querySelector("#temperature");
+	cityTemperature.innerHTML = fahrenheitTemperature
+}
+
+function displayCelsiusTemperature(event){
+	event.preventDefault();
+	let cityTemperature = document.querySelector("#temperature");
+	cityTemperature.innerHTML = Math.round(celsiusTemperature);
+	
+}
+
+let fahrenheit = document.querySelector("#fahrenheit-link");
+fahrenheit.addEventListener("click", displayFahrenheitTemperature);
+
+let celsius = document.querySelector("#celsius-link");
+console.log(celsius);
+celsius.addEventListener("click", displayCelsiusTemperature);
