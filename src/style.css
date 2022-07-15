@@ -8,7 +8,7 @@
 	margin-top: 20px;
 	box-shadow: 5px 5px 5px gray;
 	margin-bottom: 20px;
-	background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
+	background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
 }
 .weather-container{
 	display: flex;
@@ -118,8 +118,9 @@ form{
 	background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
 }
 .link-progect{
+	font-weight: bold;
 	text-decoration: none;
-	color: rgb(250, 250, 29);
+	color: rgb(47, 47, 116);
 }
 .temperature .active{
 	color: rgb(47, 47, 116);
