@@ -11,9 +11,6 @@
 	background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
 }
 .weather-container{
-	display: flex;
-	flex: 1 1 auto;
-	flex-direction: column;
 	margin-bottom: 40px;
 }
 .btn-light{
@@ -86,36 +83,40 @@ form{
 	min-width: 120px;
 	font-size: 20px;
 	background-color: rgb(143, 143, 201);
-		color: white;
+	color: white;
 	font-weight: 600;
 	border-color: rgb(112, 112, 192);
 	background: radial-gradient(circle at 10% 20%, rgb(99, 202, 236) 0%, rgb(162, 162, 236) 90.2%);
 }
-
-.card-container{
-	text-align: center;
-	margin: 0 auto;
-	display: flex;
-	flex: 0 0 20%;
-	justify-content: center;
+.weather-forecast {
+	margin-top: 20px;
 }
 .card-title{
 	font-size: 24px;
 	margin-bottom: 20px;
 	color: rgb(61, 61, 143);
+	font-weight: bold;
 }
-.card-temperature{
+img.card-img {
+	max-width: 100px;
+}
+.card-temperature-max{
 	color: rgb(61, 61, 143);
 	font-size: 20px;
+	font-weight: bold;
 }
-.card-img{
-	max-width: 70px;
-	margin: 0 auto;
-
+.card-temperature-min {
+	color: rgb(61, 61, 143);
+	font-size: 20px;
+	
 }
 .card{
-	min-width: 150px;
-	background: radial-gradient(592px at 48.2% 50%, rgba(255, 255, 249, 0.6) 0%, rgb(160, 199, 254) 74.6%);
+	text-align: center;
+	border: none;
+	background: none;
+	background: yellow;
+	max-width: 150px;
+	align-items: center;
 }
 .link-progect{
 	font-weight: bold;

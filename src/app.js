@@ -1,27 +1,6 @@
 String.prototype.firstLetterCaps = function() {
 	return this.charAt(0).toUpperCase() + this.slice(1);
 }
-// let cityTemperature = document.querySelector("#temperature");
-// console.log(cityTemperature);
-// let temperatureCelsius = cityTemperature.innerHTML; // 15
-
-
-
-// let celsius = document.querySelector("#celsius-link");
-// console.log(celsius);
-// celsius.addEventListener("click", changeTemperatureC);
-
-
-// function changeTemperatureF(){
-	
-// 	let fahrenheitTemperature = Math.round((temperatureCelsius*1.8)+32);
-// 	console.log(fahrenheitTemperature);
-// 	cityTemperature.innerHTML = fahrenheitTemperature;	
-// }
-
-// function changeTemperatureC(){
-// 	cityTemperature.innerHTML = temperatureCelsius;
-// }
 let celsiusTemperature = null;
 function search(event){
 	event.preventDefault();
@@ -66,11 +45,30 @@ if (minutes < 10){
 let time = `${hours}:${minutes}`;
 let weekDay = document.querySelector("h5.day");
 weekDay.innerHTML = `${day}, ${time}`;
-
 let apiKey = "9de11751bb0c887f6952489fac12bc96";
 let cityBoryslav = document.querySelector("h1");
 let Boryslavcity = cityBoryslav.innerHTML;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Boryslavcity}&appid=${apiKey}&units=metric`;
+
+function displayForecast() {
+	let forecastElement = document.querySelector("#forecast");
+	let forecastHTML = `<div class="row">`;
+	let days = ["Tue", "Fri", "Sat", "Mon"];
+	days.forEach(function (day) {
+		forecastHTML = forecastHTML + `          
+        <div class="card">
+            <div class="card-title">${day}</div>
+            <img class="card-img" src="./images/rain.png" alt="picture" />
+            <div class="card-tenperature">
+                <span class="card-temperature-max">22°C</span>
+                <span class="card-temperature-min">15°C</span>
+            </div>
+        </div>`;
+	});
+	forecastHTML = forecastHTML + `</div>`;
+	forecastElement.innerHTML = forecastHTML;
+	
+}
 
 function showTemperatureBoryslav(response) {
 	console.log (response.data);
@@ -143,6 +141,7 @@ function displayCelsiusTemperature(event){
 	celsius.classList.add("active");
 	fahrenheit.classList.remove("active");
 }
+displayForecast();
 
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", displayFahrenheitTemperature);
