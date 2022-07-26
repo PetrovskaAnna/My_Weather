@@ -1,21 +1,29 @@
 String.prototype.firstLetterCaps = function() {
 	return this.charAt(0).toUpperCase() + this.slice(1);
 }
+function formatDay(timestamp) {
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	return days[day];
+}
 function displayForecast(response) {
-	console.log(response.data);
+	let forecast = response.data.daily;
 	let forecastElement = document.querySelector("#forecast");
 	let forecastHTML = `<div class="row">`;
 	let days = ["Tue", "Fri", "Sat", "Mon",];
-	days.forEach(function (day) {
+	forecast.forEach(function (forecastDay, index) {
+		if (index<6) {
 		forecastHTML = forecastHTML + `          
         <div class="card">
-            <div class="card-title">${day}</div>
-            <img class="card-img" src="./images/rain.png" alt="picture" />
+            <div class="card-title">${formatDay(forecastDay.dt)}</div>
+            <img class="card-img" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
             <div class="card-tenperature">
-                <span class="card-temperature-max">22°C</span>
-                <span class="card-temperature-min">15°C</span>
+                <span class="card-temperature-max"> ${Math.round(forecastDay.temp.max)}°C</span>
+                <span class="card-temperature-min">${Math.round(forecastDay.temp.min)}°C</span>
             </div>
         </div>`;
+		}
 	});
 	forecastHTML = forecastHTML + `</div>`;
 	forecastElement.innerHTML = forecastHTML;
