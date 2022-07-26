@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=Taviraj:ital,wght@1,400;1,600&display=swap');
 .container{
+	font-family: 'Taviraj', serif;
 	max-width: 900px;
 	margin: 0 auto;
 	padding: 20px;
@@ -8,7 +9,7 @@
 	margin-top: 20px;
 	box-shadow: 5px 5px 5px gray;
 	margin-bottom: 20px;
-	background: radial-gradient(circle at 10% 20%, rgba(91, 173, 254, 0.46) 0%, rgba(91, 224, 254, 0.46) 47.2%, rgba(170, 254, 235, 0.43) 90%);
+	background: radial-gradient(circle at 48.7% 44.3%, rgb(30, 144, 231) 0%, rgb(56, 113, 209) 22.9%, rgb(38, 76, 140) 76.7%, rgb(31, 63, 116) 100.2%);
 }
 .weather-container{
 	margin-bottom: 40px;
@@ -18,15 +19,16 @@
 	margin: 0px 0px 30px 0px;
 }
 .city{
-	font-size: 67px;
-	font-family: 'Prompt', sans-serif;
-	color: rgb(47, 47, 116);
+	font-weight: 600;
+	font-size: 57px;
+	font-family: 'Taviraj', serif;
+	color: rgb(216, 216, 237);
 	margin-bottom: 20px;
 }
 #temperature {
-	color: rgb(47, 47, 116);
+	color: rgb(216, 216, 237);
 	font-size: 37px;
-	
+	font-weight: 600;
 }
 .temperature-units a {
 	text-decoration: none;
@@ -36,22 +38,22 @@
 .humidity{
 	margin: 30px 0px 30px 50px;
 	font-size: 26px;
-	color: rgb(102, 107, 108);
+	color: rgb(216, 216, 237);
 }
 .wind{
 	margin-left: 50px;
 	font-size: 26px;
-	color: rgb(102, 107, 108);
+	color: rgb(216, 216, 237);
 }
 h5 {
 	font-size: 30px;
-	color: rgb(45, 44, 44);
+	color: rgb(216, 216, 237);
 }
 .day{
-	color: rgb(47, 47, 116);
+	color: rgb(216, 216, 237);
 }
 span{
-	color: rgb(61, 61, 143);
+	color: rgb(216, 216, 237);
 }
 .col{
 	margin: 0px 0px 30px 0px;
@@ -69,6 +71,7 @@ form{
 	background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
 }
 .form-seach{
+	font-family: sans-serif;
 	min-height: 25px;
 	font-size: 20px;
 	min-width: 120px;
@@ -79,6 +82,7 @@ form{
 	background: linear-gradient(109.6deg, rgb(120, 143, 251) 11.2%, rgb(133, 235, 255) 91.1%);
 }
 .form-current{
+	font-family: sans-serif;
 	min-height: 25px;
 	min-width: 120px;
 	font-size: 20px;
@@ -94,21 +98,20 @@ form{
 .card-title{
 	font-size: 24px;
 	margin-bottom: 20px;
-	color: rgb(61, 61, 143);
-	font-weight: bold;
+	color: rgb(216, 216, 237);
+	font-weight: 600;
 }
 img.card-img {
 	max-width: 100px;
 }
 .card-temperature-max{
-	color: rgb(61, 61, 143);
+	color: rgb(216, 216, 237);
 	font-size: 20px;
 	font-weight: bold;
 }
 .card-temperature-min {
-	color: rgb(61, 61, 143);
+	color: rgb(216, 216, 237);
 	font-size: 20px;
-	
 }
 .card{
 	text-align: center;
@@ -120,9 +123,13 @@ img.card-img {
 .link-progect{
 	font-weight: bold;
 	text-decoration: none;
-	color: rgb(47, 47, 116);
+	color: rgb(216, 216, 237);
+	font-family: sans-serif;
 }
 .temperature .active{
-	color: rgb(47, 47, 116);
+	color: rgb(216, 216, 237);
 	cursor: default;
+}
+small {
+	color: rgb(247, 240, 239);
 }

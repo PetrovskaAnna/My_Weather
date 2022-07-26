@@ -19,7 +19,7 @@ function displayForecast(response) {
             <div class="card-title">${formatDay(forecastDay.dt)}</div>
             <img class="card-img" src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"/>
             <div class="card-tenperature">
-                <span class="card-temperature-max"> ${Math.round(forecastDay.temp.max)}°C</span>
+                <span class="card-temperature-max"> ${Math.round(forecastDay.temp.max)}°C</span><br/>
                 <span class="card-temperature-min">${Math.round(forecastDay.temp.min)}°C</span>
             </div>
         </div>`;
