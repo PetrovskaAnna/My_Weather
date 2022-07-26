@@ -119,6 +119,7 @@ img.card-img {
 	background: none;
 	max-width: 145px;
 	align-items: center;
+	margin-bottom: 25px;
 }
 .link-progect{
 	font-weight: bold;
