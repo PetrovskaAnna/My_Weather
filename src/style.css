@@ -281,14 +281,34 @@ img.card-img {
 	align-items: center;
 	margin-bottom: 25px;
 }
+@media(max-width: 885.98px) {
+	.card {
+		max-width: 125px;
+	}
+}
 @media(max-width: 767.98px) {
 	.card {
-		max-width: 100px;
+		max-width: 105px;
+	}
+}
+@media(max-width: 629.98px) {
+	.card {
+		max-width: 90px;
+	}
+}
+@media(max-width: 561.98px) {
+	.card {
+		max-width: 75px;
 	}
 }
 @media(max-width: 479.98px) {
 	.card {
-		max-width: 80px;
+		max-width: 65px;
+	}
+}
+@media(max-width: 408.98px) {
+	.card {
+		max-width: 55px;
 	}
 }
 .link-progect{
@@ -296,6 +316,17 @@ img.card-img {
 	text-decoration: none;
 	color: rgb(216, 216, 237);
 	font-family: sans-serif;
+}
+@media(max-width: 767.98px) {
+	small {
+		font-size: 11px;
+	}
+}
+
+@media(max-width: 479.98px) {
+	small {
+			font-size: 9px;
+		}
 }
 .temperature .active{
 	color: rgb(216, 216, 237);
