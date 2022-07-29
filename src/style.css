@@ -14,10 +14,10 @@
 .weather-container{
 	margin-bottom: 40px;
 }
-.btn-light{
+/* .btn-light{
 	font-size: 24px;
 	margin: 0px 0px 30px 0px;
-}
+} */
 .city{
 	font-weight: 600;
 	font-size: 57px;
@@ -25,33 +25,106 @@
 	color: rgb(216, 216, 237);
 	margin-bottom: 20px;
 }
+@media(max-width: 767.98px) {
+	.city{
+		font-size: 37px;
+	}
+}
+@media(max-width: 479.98px) {
+	.city {
+		font-size: 25px;
+	}
+}
+@media(max-width: 767.98px) {
+	.col img {
+		max-width: 100px;
+	}
+}
+
+@media(max-width: 479.98px) {
+	.col img {
+		max-width: 80px;
+	}
+}
 #temperature {
 	color: rgb(216, 216, 237);
 	font-size: 37px;
 	font-weight: 600;
 }
+@media(max-width: 767.98px) {
+	#temperature {
+		font-size: 25px;
+	}
+}
+
+@media(max-width: 479.98px) {
+	#temperature {
+		font-size: 16px;
+	}
+}
 .temperature-units a {
 	text-decoration: none;
 	font-size: 20px;
+}
+@media(max-width: 767.98px) {
+	.temperature-units a {
+		font-size: 15px;
+	}
+}
 
+@media(max-width: 479.98px) {
+	.temperature-units a {
+		font-size: 10px;
+	}
 }
 .humidity{
-	margin: 30px 0px 30px 50px;
+	margin: 30px 0px 30px 0px;
 	font-size: 26px;
 	color: rgb(216, 216, 237);
 }
+@media(max-width: 767.98px) {
+	.humidity {
+		font-size: 18px;
+		margin: 10px 0px 20px 0px;
+	}
+}
+@media(max-width: 479.98px) {
+	.humidity {
+		font-size: 13px;
+	}
+}
 .wind{
-	margin-left: 50px;
 	font-size: 26px;
 	color: rgb(216, 216, 237);
+}
+@media(max-width: 767.98px) {
+	.wind {
+		font-size: 18px;
+	}
+}
+@media(max-width: 479.98px) {
+	.wind {
+		font-size: 13px;
+	}
 }
 h5 {
 	font-size: 30px;
 	color: rgb(216, 216, 237);
 }
+@media(max-width: 767.98px) {
+	h5 {
+		font-size: 20px;
+	}
+}
+@media(max-width: 479.98px) {
+	h5 {
+		font-size: 16px;
+	}
+}
 .day{
 	color: rgb(216, 216, 237);
 }
+
 span{
 	color: rgb(216, 216, 237);
 }
@@ -70,6 +143,21 @@ form{
 	border: 2px solid rgb(208, 208, 235);
 	background: radial-gradient(circle at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
 }
+@media(max-width: 767.98px) {
+	.form-city {
+		min-width: 220px;
+		min-height: 20px;
+		font-size: 15px;
+	}
+}
+
+@media(max-width: 479.98px) {
+	.form-city {
+		min-width: 100px;
+		min-height: 15px;
+		font-size: 12px;
+	}
+}
 .form-seach{
 	font-family: sans-serif;
 	min-height: 25px;
@@ -80,6 +168,20 @@ form{
 	font-weight: 600;
 	border-color: rgb(132, 132, 202);
 	background: linear-gradient(109.6deg, rgb(120, 143, 251) 11.2%, rgb(133, 235, 255) 91.1%);
+}
+@media(max-width: 767.98px) {
+	.form-seach {
+		min-width: 90px;
+		min-height: 20px;
+		font-size: 15px;
+	}
+}
+@media(max-width: 479.98px) {
+	.form-seach {
+		min-width: 40px;
+		min-height: 15px;
+		font-size: 12px;
+	}
 }
 .form-current{
 	font-family: sans-serif;
@@ -92,26 +194,84 @@ form{
 	border-color: rgb(112, 112, 192);
 	background: radial-gradient(circle at 10% 20%, rgb(99, 202, 236) 0%, rgb(162, 162, 236) 90.2%);
 }
+@media(max-width: 767.98px) {
+	.form-current {
+		min-width: 90px;
+		min-height: 20px;
+		font-size: 15px;
+	}
+}
+@media(max-width: 479.98px) {
+	.form-current {
+		min-width: 40px;
+		min-height: 15px;
+		font-size: 12px;
+	}
+}
 .weather-forecast {
 	margin-top: 20px;
 }
 .card-title{
 	font-size: 24px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	color: rgb(216, 216, 237);
 	font-weight: 600;
 }
+@media(max-width: 767.98px) {
+	.card-title {
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+}
+@media(max-width: 479.98px) {
+	.card-title {
+		font-size: 16px;
+		margin-bottom: 5px;
+	}
+}
 img.card-img {
-	max-width: 100px;
+	max-width: 90px;
+}
+@media(max-width: 767.98px) {
+	img.card-img {
+		max-width: 70px;
+	}
+}
+
+@media(max-width: 479.98px) {
+	img.card-img {
+		max-width: 50px;
+}
 }
 .card-temperature-max{
 	color: rgb(216, 216, 237);
 	font-size: 20px;
 	font-weight: bold;
 }
+@media(max-width: 767.98px) {
+	.card-temperature-max {
+		font-size: 16px;
+	}
+}
+@media(max-width: 479.98px) {
+	.card-temperature-max {
+		font-size: 14px;
+	}
+}
 .card-temperature-min {
 	color: rgb(216, 216, 237);
 	font-size: 20px;
+}
+@media(max-width: 767.98px) {
+	.card-temperature-min {
+		font-size: 16px;
+	}
+}
+
+@media(max-width: 479.98px) {
+	.card-temperature-min {
+		font-size: 14px;
+	}
 }
 .card{
 	text-align: center;
@@ -120,6 +280,16 @@ img.card-img {
 	max-width: 145px;
 	align-items: center;
 	margin-bottom: 25px;
+}
+@media(max-width: 767.98px) {
+	.card {
+		max-width: 100px;
+	}
+}
+@media(max-width: 479.98px) {
+	.card {
+		max-width: 80px;
+	}
 }
 .link-progect{
 	font-weight: bold;

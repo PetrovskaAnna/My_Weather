@@ -13,7 +13,7 @@ function displayForecast(response) {
 	let forecastHTML = `<div class="row">`;
 	let days = ["Tue", "Fri", "Sat", "Mon",];
 	forecast.forEach(function (forecastDay, index) {
-		if (index<6) {
+		if (index < 6) {
 		forecastHTML = forecastHTML + `          
         <div class="card">
             <div class="card-title">${formatDay(forecastDay.dt)}</div>
@@ -30,10 +30,8 @@ function displayForecast(response) {
 	
 }
 function getForecast(coordinates){
-	console.log(coordinates);
 	let apiKey = "9de11751bb0c887f6952489fac12bc96";
 	let ApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-	console.log(ApiUrl);
 	axios.get(ApiUrl).then(displayForecast);
 }
 let celsiusTemperature = null;
@@ -47,6 +45,11 @@ function search(event){
 	let apiKey = "9de11751bb0c887f6952489fac12bc96";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${h1.innerHTML}&appid=${apiKey}&units=metric`;
 	function showTemperature(response) {
+		let now = new Date().toLocaleDateString();
+
+		// let hours = now.getHours();
+		console.log(now)
+		// console.log(hours)
 		celsiusTemperature = response.data.main.temp;
 		let temperature = Math.round(celsiusTemperature);
 		let cityTemperature = document.querySelector("#temperature");
@@ -60,13 +63,12 @@ function search(event){
 		let weatherIcon = document.querySelector("#icon");
 		weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 		getForecast(response.data.coord);
+		
 	}
-	
 	axios.get(apiUrl).then(showTemperature);
 }
 let form = document.querySelector("#form-search");
 form.addEventListener("submit", search);
-
 let now = new Date();
 let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let day = days[now.getDay()];
@@ -86,11 +88,7 @@ let cityBoryslav = document.querySelector("h1");
 let Boryslavcity = cityBoryslav.innerHTML;
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${Boryslavcity}&appid=${apiKey}&units=metric`;
 
-
-
-
 function showTemperatureBoryslav(response) {
-	console.log (response.data);
 	celsiusTemperature = response.data.main.temp;
 	let temperature = Math.round(celsiusTemperature);
 	let cityTemperature = document.querySelector("#temperature");
@@ -110,7 +108,6 @@ axios.get(apiUrl).then(showTemperatureBoryslav);
 
 function showTemperatureMyLocation(response){
 	let cityNames = response.data.name;
-	console.log(cityNames);
 	let cityName = document.querySelector("#city");
 	cityName.innerHTML = `${cityNames}`;
 	celsiusTemperature = response.data.main.temp;	
@@ -125,17 +122,28 @@ function showTemperatureMyLocation(response){
 	cityHumidity.innerHTML = `${humidity}`;
 	let weatherIcon = document.querySelector("#icon");
 	weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-	console.log(response);
 	getForecast(response.data.coord);
 }
 
 function changeMyLocation(position){
 	let latitude = position.coords.latitude;
-	console.log(latitude);
 	let longitude = position.coords.longitude;
-	console.log(longitude);
 	let apiKey = "9de11751bb0c887f6952489fac12bc96";
-	let apiUrl =`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+	let now = new Date();
+	let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	let day = days[now.getDay()];
+	let hours = now.getHours();
+	if (hours < 10){
+		hours = `0${hours}`;
+	}
+	let minutes = now.getMinutes();
+	if (minutes < 10){
+		minutes = `0${minutes}`;
+	}
+	let time = `${hours}:${minutes}`;
+	let weekDay = document.querySelector("h5.day");
+	weekDay.innerHTML = `${day}, ${time}`;
 	axios.get(apiUrl).then(showTemperatureMyLocation);
 }
 
@@ -164,11 +172,8 @@ function displayCelsiusTemperature(event){
 }
 
 
-// displayForecast();
-
 let fahrenheit = document.querySelector("#fahrenheit-link");
 fahrenheit.addEventListener("click", displayFahrenheitTemperature);
 
 let celsius = document.querySelector("#celsius-link");
-console.log(celsius);
 celsius.addEventListener("click", displayCelsiusTemperature);
