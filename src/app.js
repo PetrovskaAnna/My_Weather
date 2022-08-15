@@ -45,10 +45,10 @@ function search(event){
 	let apiKey = "9de11751bb0c887f6952489fac12bc96";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${h1.innerHTML}&appid=${apiKey}&units=metric`;
 	function showTemperature(response) {
-		let now = new Date().toLocaleDateString();
+		// let now = new Date().toLocaleDateString();
 
 		// let hours = now.getHours();
-		console.log(now)
+		// console.log(now)
 		// console.log(hours)
 		celsiusTemperature = response.data.main.temp;
 		let temperature = Math.round(celsiusTemperature);
